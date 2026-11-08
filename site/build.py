@@ -23,17 +23,17 @@ def button(text,href,secondary=False):
 def tag(text,live=False):
     return f'<span class="tag{" live" if live else ""}">{("<span class=status-dot aria-hidden=true></span>") if live else ""}{text}</span>'
 
-def header():
+def header(path="/"):
     if IS_PERSONAL:
         brand='<span class="personal-wordmark">akaalexey<b>.</b></span>'
-        items=[('about','Обо мне'),('projects','Проект'),('experience','Опыт'),('contact','Контакты')]
+        items=[('about','Обо мне'),('projects','Проекты'),('experience','Опыт'),('contact','Контакты')]
         theme='<button class="icon-button" data-theme-toggle hidden type="button" aria-label="Включить тёмную тему" aria-pressed="false"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4 19 5"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.8 13.2A8.8 8.8 0 0 1 10.8 3a8.9 8.9 0 1 0 10 10.2Z"/></svg></button>'
     else:
         brand='<img src="/assets/logo.svg" width="42" height="42" alt=""><span class="brand-name">ALEX GAME LAB<small>НЕЗАВИСИМАЯ ИГРОВАЯ КОМАНДА</small></span>'
         items=[('games','Игры'),('studio','Студия'),('team','Команда'),('contact','Контакты')]
         theme=''
     portal_nav=f'<a href="{AGL}/news/">Новости</a><a href="{AGL}/account/">AGL ID ↗</a>'
-    nav=''.join(f'<a href="/#{id}">{label}</a>' for id,label in items)
+    nav=''.join('<a href="/'+id+'/"'+(' aria-current="page"' if path.startswith('/'+id+'/') else '')+'>'+label+'</a>' for id,label in items) if IS_PERSONAL else ''.join(f'<a href="/#{id}">{label}</a>' for id,label in items)
     return f'<a class="skip" href="#main">Перейти к содержимому</a><header class="site-header"><div class="header-inner shell"><a class="brand" href="/" aria-label="{"Алексей akaalexey" if IS_PERSONAL else "Alex Game Lab"} — главная">{brand}</a><nav class="navigation" id="navigation" data-navigation aria-label="Основная навигация">{nav}{portal_nav}</nav><div class="header-actions"><a class="header-cta" href="{TG}">Написать ↗</a>{theme}<button class="icon-button menu-toggle" type="button" data-menu-toggle aria-controls="navigation" aria-expanded="false" aria-label="Открыть меню" hidden><span aria-hidden="true"><span></span><span></span></span></button></div></div></header>'
 
 def footer():
@@ -80,7 +80,7 @@ def page(path,title,description,body,cover='rublemet-cover.jpg',noindex=False):
     target=OUT/(path.strip('/')+'/index.html' if path!='/' else 'index.html')
     if path=='/404.html':target=OUT/'404.html'
     target.parent.mkdir(parents=True,exist_ok=True)
-    document=head(title,description,path,cover,noindex)+header()+'<main id="main">'+body+'</main>'+footer()+'</body></html>'
+    document=head(title,description,path,cover,noindex)+header(path)+'<main id="main">'+body+'</main>'+footer()+'</body></html>'
     if BASE_PATH:
         document=re.sub(r'\b(href|src|srcset)="(/(?!/)[^"]*)"',lambda m:f'{m[1]}="{BASE_PATH}{m[2]}"',document)
     target.write_text(document)
@@ -95,12 +95,12 @@ def agl_home():
 
 def personal_home():
     return f'''
-<section class="personal-hero shell"><div class="hero-copy entrance"><p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> ОТКРЫТ К ПРЕДЛОЖЕНИЯМ И ИДЕЯМ</p><h1>Алексей.<br>В сети —<br><span>akaalexey.</span></h1><p class="hero-lead">Разработчик ПО и игр. Основатель AGL и руководитель проекта. В продуктовом программировании — капитан команды.</p><div class="button-row">{button("Обсудить работу",TG)}{button("Мой проект","#projects",True)}</div></div><figure class="portrait-stage entrance-delay"><svg class="portrait-star" width="66" height="66" viewBox="0 0 66 66" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" aria-hidden="true"><path d="M33 5v56M5 33h56M13 13l40 40M13 53l40-40"/></svg><img src="/assets/alexey-portrait.webp" alt="Аниме-образ Алексея: короткие каштановые волосы, очки и голубая рубашка" width="1312" height="1200" fetchpriority="high"><figcaption class="portrait-label"><strong>Идея → продукт</strong>Код, механики и истории</figcaption></figure></section>
+<section class="personal-hero shell"><div class="hero-copy entrance"><p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> ОТКРЫТ К ПРЕДЛОЖЕНИЯМ И ИДЕЯМ</p><h1>Алексей.<br>В сети —<br><span>akaalexey.</span></h1><p class="hero-lead">Разработчик ПО и игр. Основатель AGL и руководитель проекта. В продуктовом программировании — капитан команды.</p><div class="button-row">{button("Обсудить работу",TG)}{button("Мой проект","/projects/",True)}</div></div><figure class="portrait-stage entrance-delay"><svg class="portrait-star" width="66" height="66" viewBox="0 0 66 66" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" aria-hidden="true"><path d="M33 5v56M5 33h56M13 13l40 40M13 53l40-40"/></svg><img src="/assets/alexey-portrait.webp" alt="Аниме-образ Алексея: короткие каштановые волосы, очки и голубая рубашка" width="1312" height="1200" fetchpriority="high"><figcaption class="portrait-label"><strong>Идея → продукт</strong>Код, механики и истории</figcaption></figure></section>
 <div class="stats shell"><div class="stat"><strong>5</strong><span>лет занимаюсь<br>разработкой сайтов</span></div><div class="stat"><strong>3</strong><span>года создаю<br>приложения</span></div><div class="stat"><strong>II</strong><span>спортивный разряд<br>по программированию</span></div></div>
 <section class="section shell" id="about"><div class="about-grid"><div class="reveal"><p class="section-label">01 / ОБО МНЕ</p><h2>Разбираюсь.<br>Придумываю.<br>Довожу до продукта.</h2></div><div class="about-copy reveal"><p>Меня зовут Алексей, в сети — akaalexey. Я разрабатываю программное обеспечение и игры, основал Alex Game Lab и руковожу проектом «Рублемёт».</p><p>Работаю с Python, SQL и JavaScript, владею C++ на базовом уровне. Использую нейросети в работе над продуктами. Интересуюсь задачами, в которых нужны и техническое понимание, и работа с идеей.</p><p>В «Рублемёте» моя зона ответственности — игровые механики, сюжет и тексты, а также руководство проектом.</p><div class="skills"><span class="skill">Python</span><span class="skill">SQL</span><span class="skill">JavaScript</span><span class="skill">C++ <small>базовый</small></span></div></div></div></section>
 <section class="section shell" id="projects"><div class="section-top reveal"><div><p class="section-label">02 / ПРОЕКТ</p><h2>Игра, над которой<br>работаю сейчас.</h2></div><a class="text-link" href="{AGL}">Alex Game Lab <span aria-hidden="true">↗</span></a></div><article class="feature-card reveal"><div class="feature-visual"><img src="/assets/rublemet-cover.webp" alt="Промо-иллюстрация игрового мира «Рублемёта»" width="1536" height="864" loading="lazy"><span class="visual-caption">ПРОЕКТ ALEX GAME LAB</span></div><div class="feature-body">{tag("В разработке",True)}<h3>Рублемёт</h3><p>Игра о работе, деньгах и переменах. Механики развития, маленькие истории и персонажи складываются в один игровой путь.</p><div class="tags">{tag("Игровые механики")}{tag("Сюжет и тексты")}{tag("Руководство")}</div><a class="text-link" href="/projects/rublemet/">Мой вклад в проект <span aria-hidden="true">↗</span></a></div></article></section>
 <section class="section shell" id="experience"><div class="section-top reveal"><div><p class="section-label">03 / ОПЫТ И ДОСТИЖЕНИЯ</p><h2>Практика, команда<br>и сложные задачи.</h2></div></div><div class="credentials"><article class="credential reveal"><span class="credential-icon" aria-hidden="true">↗</span><h3>Капитан команды</h3><p>Участвую в продуктовом программировании как капитан команды — team lead.</p></article><article class="credential reveal"><span class="credential-icon" aria-hidden="true">II</span><h3>Спортивный разряд</h3><p>Имею второй спортивный разряд по спортивному программированию.</p></article><article class="credential reveal"><span class="credential-icon" aria-hidden="true">⌘</span><h3>Алгоритмы и CTF</h3><p>Участвовал и занимал призовые места в соревнованиях по алгоритмическому программированию и CTF.</p></article></div></section>
-<section class="section shell"><div class="workspace-grid"><figure class="workspace-image reveal"><img src="/assets/alexey-workspace.webp" alt="Иллюстрация: аниме-образ Алексея за столом с ноутбуком и блокнотом" width="1536" height="1024" loading="lazy"></figure><div class="workspace-copy reveal"><p class="section-label">04 / НАПРАВЛЕНИЯ</p><h2>На стыке<br>технологий и идей.</h2><p>Интересны руководство игровыми проектами, управление IT-продуктами и разработка игровых концепций. Готов рассматривать и другие направления.</p><p>Ценю обратную связь: впечатления, предложения и вопросы помогают увидеть продукт с другой стороны.</p><div class="button-row">{button("Познакомиться",TG,True)}</div></div></div></section>
+<section class="section shell" id="directions"><div class="workspace-grid"><figure class="workspace-image reveal"><img src="/assets/alexey-workspace.webp" alt="Иллюстрация: аниме-образ Алексея за столом с ноутбуком и блокнотом" width="1536" height="1024" loading="lazy"></figure><div class="workspace-copy reveal"><p class="section-label">04 / НАПРАВЛЕНИЯ</p><h2>На стыке<br>технологий и идей.</h2><p>Интересны руководство игровыми проектами, управление IT-продуктами и разработка игровых концепций. Готов рассматривать и другие направления.</p><p>Ценю обратную связь: впечатления, предложения и вопросы помогают увидеть продукт с другой стороны.</p><div class="button-row">{button("Познакомиться",TG,True)}</div></div></div></section>
 {contact(True)}'''
 
 def game_page(personal=False):
@@ -120,7 +120,24 @@ def privacy():
     return f'''<section class="page-hero shell"><nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="/">Главная</a><span aria-hidden="true">/</span><span>Конфиденциальность</span></nav><p class="eyebrow">ДАННЫЕ И СВЯЗЬ</p><h1>Конфиденциальность.</h1><p class="lead">Как устроена эта версия сайта и что происходит при переходе к внешним сервисам.</p></section><article class="legal shell"><p class="small-note">Обновлено 6 ноября 2026 года.</p><h2>Что делает сайт</h2><p>Это информационный сайт {"Алексея (akaalexey)" if IS_PERSONAL else "игровой команды Alex Game Lab"}. На страницах нет регистрации, контактных форм, оплаты, рассылки и подключённых счётчиков аналитики. Сайт не запрашивает имя, почту или номер телефона посетителя.</p><p>Шрифты, иллюстрации и сценарии загружаются с самого сайта. Код сайта не устанавливает рекламные или аналитические cookies.</p>{theme}<h2>Техническая работа хостинга</h2><p>Эта версия размещена на GitHub Pages. Для доставки страниц и обеспечения работы сервиса провайдер может обрабатывать технические сведения запроса, включая IP-адрес и данные браузера. Отсутствие форм и аналитики в коде сайта не означает отсутствия технической обработки у хостинга. Условия провайдера описаны в <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">его политике конфиденциальности</a>.</p><h2>Обращения и внешние ссылки</h2><p>Связаться с Алексеем можно через <a href="{TG}">Telegram @akaAlexey</a>. При переходе к Telegram, GitHub и другим внешним сервисам действуют их условия и практики обработки данных.</p><p>Если вы отправляете сообщение, указанные в нём сведения используются для ответа и обсуждения вашего обращения. Для первого сообщения достаточно описать вопрос; документы и другие дополнительные сведения сайт не запрашивает.</p><h2>Вопросы о данных</h2><p>По вопросам об этой странице или об информации, которую вы ранее прислали Алексею, можно написать в <a href="{TG}">Telegram</a>.</p><h2>Границы этой страницы</h2><p>Информация относится к этому сайту. Она не заменяет отдельное описание обработки данных в приложении «Рублемёт» и других сервисах. При изменении хостинга или добавлении новых функций сведения на этой странице обновляются.</p><div class="button-row">{button("Вернуться на главную","/",True)}</div></article>'''
 
 if IS_PERSONAL:
-    page('/','Алексей · akaalexey — разработчик ПО и игр','Разработчик ПО и игр, основатель AGL. Опыт, проект «Рублемёт» и связь для предложений работы и идей.',personal_home(),'alexey-workspace.jpg')
+    content = personal_home()
+    sections = {name: re.search(r'<section\b(?=[^>]*\bid="' + name + r'")[^>]*>.*?</section>', content, re.S).group(0) for name in ('about', 'projects', 'experience', 'directions', 'contact')}
+    intro = content.split('<section class="section shell" id="about">')[0]
+    shortcuts = '<section class="section shell"><div class="credentials">' + ''.join(
+        '<a class="credential reveal" href="' + url + '"><span class="credential-icon" aria-hidden="true">↗</span><h2>' + title + '</h2><p>' + note + '</p></a>'
+        for url, title, note in (
+            ('/about/', 'Обо мне', 'Разработка, навыки и подход к работе.'),
+            ('/projects/', 'Мои проекты', '«Рублемёт» и мой вклад в игру.'),
+            ('/experience/', 'Опыт', 'Команда, программирование и соревнования.'))
+    ) + '</div></section>'
+    page('/','Алексей · akaalexey — разработчик ПО и игр','Разработчик ПО и игр, основатель AGL. Опыт, проект «Рублемёт» и связь для предложений работы и идей.',intro + shortcuts,'alexey-workspace.jpg')
+    def section_page(path, title, lead, body):
+        hero = '<section class="page-hero shell"><nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="/">Главная</a><span aria-hidden="true">/</span><span>' + title + '</span></nav><p class="eyebrow">АЛЕКСЕЙ · AKA ALEXEY</p><h1>' + title + '<span class="violet">.</span></h1><p class="lead">' + lead + '</p></section>'
+        page(path, title + ' · akaalexey', lead, hero + body, 'alexey-workspace.jpg')
+    section_page('/about/', 'Обо мне', 'Разработчик ПО и игр. Основатель Alex Game Lab и руководитель проекта.', sections['about'])
+    section_page('/projects/', 'Проекты', 'Моя работа над игровыми механиками, сюжетами и продуктами.', sections['projects'])
+    section_page('/experience/', 'Опыт и достижения', 'Программирование, работа с командой и интерес к сложным задачам.', sections['experience'] + sections['directions'])
+    section_page('/contact/', 'Контакты', 'Предложения работы, сотрудничество и обратная связь.', sections['contact'])
     page('/projects/rublemet/','Рублемёт — мой вклад · akaalexey','Личный вклад Алексея в «Рублемёт»: игровые механики, сюжет, тексты и руководство проектом.',game_page(True))
 else:
     page('/','Alex Game Lab — независимая игровая команда','Alex Game Lab: создаём «Рублемёт», работаем над игровыми механиками, историями и визуальным миром.',agl_home(),'agl-hero.jpg')
@@ -128,9 +145,11 @@ else:
 page('/privacy/','Конфиденциальность · '+('akaalexey' if IS_PERSONAL else 'Alex Game Lab'),'Информация о работе сайта, настройках и внешних сервисах.',privacy(),'alexey-workspace.jpg' if IS_PERSONAL else 'agl-hero.jpg')
 error=f'<section class="error-page shell"><div><p class="error-number">404 / СТРАНИЦА НЕ НАЙДЕНА</p><h1>Похоже, мы<br>свернули не туда.</h1><p>Страница могла переехать. Вернёмся к началу?</p><div class="button-row">{button("На главную","/")}</div></div></section>'
 page('/404.html','Страница не найдена · '+('akaalexey' if IS_PERSONAL else 'AGL'),'Страница не найдена. Вернитесь на главную.',error,'alexey-workspace.jpg' if IS_PERSONAL else 'agl-hero.jpg',True)
-paths=['/','/privacy/','/projects/rublemet/' if IS_PERSONAL else '/games/rublemet/']
+paths=['/','/privacy/','/projects/rublemet/','/about/','/projects/','/experience/','/contact/'] if IS_PERSONAL else ['/','/privacy/','/games/rublemet/']
 (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{ORIGIN}{p}</loc></url>' for p in paths)+'</urlset>')
 (OUT/'robots.txt').write_text('User-agent: *\n'+('Allow: /\n' if CFG.get('production') else 'Disallow: /\n')+'Sitemap: '+ORIGIN+'/sitemap.xml\n')
 (OUT/'.nojekyll').touch()
+if IS_PERSONAL and CFG.get('production'):
+    (OUT/'CNAME').write_text(urlsplit(ORIGIN).hostname + '\n')
 print(json.dumps({'kind':KIND,'pages':len(paths)+1,'output':str(OUT),'origin':ORIGIN},ensure_ascii=False))
 

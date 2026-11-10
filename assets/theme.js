@@ -1,1 +1,1 @@
-(()=>{let t;try{t=localStorage.getItem('akaalexey-theme');}catch{}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';document.documentElement.dataset.theme=t;})();
+(function(){let theme='light';try{theme=localStorage.getItem('aka.theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');}catch{}document.documentElement.dataset.theme=theme;})();

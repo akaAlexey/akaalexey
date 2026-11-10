@@ -1,0 +1,627 @@
+{
+  "agl/home": {
+    "title": "Alex Game Lab.",
+    "intro": "«Рублемёт», новости разработки и единый аккаунт AGL ID.",
+    "eyebrow": "",
+    "hero_image": "/assets/redesign/agl-hero.webp",
+    "hero_mobile_image": "/assets/redesign/agl-hero-mobile.webp",
+    "hero_alt": "Архитектура игрового мира AGL",
+    "hero_media_id": null,
+    "seo_title": "Alex Game Lab · Рублемёт и новости разработки",
+    "seo_description": "«Рублемёт», новости разработки и единый аккаунт AGL ID.",
+    "seo_image": "/assets/redesign/agl-hero.webp",
+    "primary": {
+      "label": "Открыть Рублемёт",
+      "url": "/projects/rublemet/"
+    },
+    "secondary": {
+      "label": "Канал AGL",
+      "url": "https://t.me/alex_game_lab"
+    },
+    "featured_project": "rublemet",
+    "sections": [
+      {
+        "type": "project",
+        "title": "Рублемёт",
+        "body": "Работа, деньги и перемены. Игра для Android, в которой простое начало становится собственным путём.",
+        "image": "/assets/redesign/rublemet-cover.webp",
+        "alt": "Герой Рублемёта на городской улице",
+        "links": [
+          {
+            "label": "Исследовать игру",
+            "url": "/projects/rublemet/"
+          }
+        ]
+      }
+    ],
+    "links": [],
+    "footer_note": "",
+    "channel_label": "Канал AGL",
+    "channel_url": "https://t.me/alex_game_lab"
+  },
+  "agl/projects": {
+    "title": "Проекты, в которые мы вкладываем себя.",
+    "intro": "Сейчас в центре нашей работы — «Рублемёт». Здесь можно познакомиться с игрой и следить за её развитием.",
+    "eyebrow": "ПРОЕКТЫ AGL",
+    "hero_image": "",
+    "hero_mobile_image": "",
+    "hero_alt": "",
+    "hero_media_id": null,
+    "seo_title": "Проекты, в которые мы вкладываем себя. · AGL",
+    "seo_description": "Сейчас в центре нашей работы — «Рублемёт». Здесь можно познакомиться с игрой и следить за её развитием.",
+    "seo_image": "",
+    "primary": {
+      "label": "",
+      "url": ""
+    },
+    "secondary": {
+      "label": "",
+      "url": ""
+    },
+    "featured_project": "rublemet",
+    "sections": [],
+    "links": [],
+    "footer_note": "",
+    "channel_label": "Канал AGL",
+    "channel_url": "https://t.me/alex_game_lab"
+  },
+  "agl/project-rublemet": {
+    "title": "Рублемёт",
+    "intro": "Работа, деньги и перемены. Начни с простого дела, открой новые возможности и пройди свою историю.",
+    "eyebrow": "ИГРА ALEX GAME LAB",
+    "hero_image": "/assets/redesign/rublemet-cover.webp",
+    "hero_mobile_image": "",
+    "hero_alt": "Промо-иллюстрация мира Рублемёта",
+    "hero_media_id": null,
+    "seo_title": "Рублемёт · AGL",
+    "seo_description": "Работа, деньги и перемены. Начни с простого дела, открой новые возможности и пройди свою историю.",
+    "seo_image": "/assets/redesign/rublemet-cover.webp",
+    "primary": {
+      "label": "Новости разработки",
+      "url": "/news/?project=rublemet"
+    },
+    "secondary": {
+      "label": "Канал AGL",
+      "url": "https://t.me/alex_game_lab"
+    },
+    "featured_project": "rublemet",
+    "sections": [
+      {
+        "type": "text",
+        "title": "С маленького дела — к новым возможностям.",
+        "body": "«Рублемёт» соединяет кликер, развитие карьеры, мини-игры и сюжетные эпизоды. Действия игрока становятся частью пути: новые профессии, события и знакомство с персонажами.",
+        "eyebrow": "01 / ИДЕЯ"
+      },
+      {
+        "type": "gallery",
+        "title": "Город, в котором есть своя история.",
+        "body": "Иллюстрации задают атмосферу игрового мира. Это художественные материалы, а не снимки игрового интерфейса.",
+        "images": [
+          {
+            "src": "/assets/rublemet-street.webp",
+            "alt": "Городская улица Рублемёта",
+            "caption": "Город и его маленькие истории"
+          },
+          {
+            "src": "/assets/rublemet-character.webp",
+            "alt": "Образ героя в светлом костюме",
+            "caption": "Один из образов героя"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "title": "Проект в разработке",
+        "body": "Игра создаётся для Android. О ходе разработки и тестирования рассказываем в новостях. Подтверждённая ссылка на публичную загрузку появится здесь после выпуска.",
+        "eyebrow": "03 / СОСТОЯНИЕ"
+      },
+      {
+        "type": "text",
+        "title": "Следить за разработкой",
+        "body": "Анонсы и обновления публикуем в канале AGL. Канал обращений к администрации появится после подключения.",
+        "links": [
+          {
+            "label": "Канал AGL",
+            "url": "https://t.me/alex_game_lab"
+          }
+        ]
+      }
+    ],
+    "links": [],
+    "footer_note": "",
+    "channel_label": "Канал AGL",
+    "channel_url": "https://t.me/alex_game_lab"
+  },
+  "agl/news": {
+    "title": "Новости",
+    "intro": "Обновления проектов AGL.",
+    "eyebrow": "",
+    "hero_image": "",
+    "hero_mobile_image": "",
+    "hero_alt": "",
+    "hero_media_id": null,
+    "seo_title": "Новости · AGL",
+    "seo_description": "Обновления проектов AGL.",
+    "seo_image": "",
+    "primary": {
+      "label": "",
+      "url": ""
+    },
+    "secondary": {
+      "label": "",
+      "url": ""
+    },
+    "featured_project": "rublemet",
+    "sections": [],
+    "links": [],
+    "footer_note": "",
+    "channel_label": "Канал AGL",
+    "channel_url": "https://t.me/alex_game_lab"
+  },
+  "agl/studio": {
+    "title": "Команда AGL.",
+    "intro": "Работаем над «Рублемётом»: игровыми механиками, сюжетом, текстами и визуальными материалами. Здесь — о том, как устроена работа.",
+    "eyebrow": "О КОМАНДЕ",
+    "hero_image": "/assets/redesign/agl-hero.webp",
+    "hero_mobile_image": "",
+    "hero_alt": "Мастерская игровых миров AGL",
+    "hero_media_id": null,
+    "seo_title": "Команда AGL. · AGL",
+    "seo_description": "Работаем над «Рублемётом»: игровыми механиками, сюжетом, текстами и визуальными материалами. Здесь — о том, как устроена работа.",
+    "seo_image": "/assets/redesign/agl-hero.webp",
+    "primary": {
+      "label": "",
+      "url": ""
+    },
+    "secondary": {
+      "label": "",
+      "url": ""
+    },
+    "featured_project": "rublemet",
+    "sections": [
+      {
+        "type": "text",
+        "title": "Идея → прототип → игра",
+        "body": "Начинаем с действия, которое интересно повторять и развивать. Затем добавляем историю, работаем над темпом и проверяем детали на практике.",
+        "eyebrow": "01 / КАК МЫ РАБОТАЕМ"
+      },
+      {
+        "type": "project",
+        "title": "Сейчас работаем над «Рублемётом».",
+        "body": "Механики развития, сюжетные эпизоды и игровые материалы. Подробнее об игре и текущем состоянии — на странице проекта.",
+        "image": "/assets/redesign/rublemet-cover.webp",
+        "alt": "Мир Рублемёта",
+        "links": [
+          {
+            "label": "О проекте",
+            "url": "/projects/rublemet/"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "title": "Новости команды",
+        "body": "Анонсы и изменения проекта публикуем в канале AGL. Отдельный канал обращений к администрации будет добавлен после подключения.",
+        "links": [
+          {
+            "label": "Канал AGL",
+            "url": "https://t.me/alex_game_lab"
+          }
+        ]
+      }
+    ],
+    "links": [],
+    "footer_note": "",
+    "channel_label": "Канал AGL",
+    "channel_url": "https://t.me/alex_game_lab"
+  },
+  "agl/navigation": {
+    "title": "Alex Game Lab",
+    "intro": "Игры. Идеи. Люди.",
+    "eyebrow": "AGL",
+    "hero_image": "",
+    "hero_mobile_image": "",
+    "hero_alt": "",
+    "hero_media_id": null,
+    "seo_title": "Alex Game Lab · AGL",
+    "seo_description": "Игры. Идеи. Люди.",
+    "seo_image": "",
+    "primary": {
+      "label": "",
+      "url": ""
+    },
+    "secondary": {
+      "label": "",
+      "url": ""
+    },
+    "featured_project": "rublemet",
+    "sections": [
+      {
+        "type": "text",
+        "title": "На связи",
+        "body": "",
+        "links": [
+          {
+            "label": "Канал AGL",
+            "url": "https://t.me/alex_game_lab"
+          },
+          {
+            "label": "GitHub",
+            "url": "https://github.com/Alex-Game-Lab"
+          },
+          {
+            "label": "Портфолио разработчика",
+            "url": "https://akaalexey.ru/"
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "label": "Проекты",
+        "url": "/projects/"
+      },
+      {
+        "label": "Новости",
+        "url": "/news/"
+      },
+      {
+        "label": "Студия",
+        "url": "/about/"
+      }
+    ],
+    "footer_note": "Проекты, новости разработки и AGL ID.",
+    "channel_label": "Канал AGL",
+    "channel_url": "https://t.me/alex_game_lab"
+  },
+  "personal/home": {
+    "title": "Разработка игр и ПО.",
+    "intro": "Код, игровые механики и тексты. Здесь — выбранный проект и моя работа над ним.",
+    "eyebrow": "AKAALEXEY",
+    "hero_image": "/assets/redesign/personal-studio.webp",
+    "hero_mobile_image": "",
+    "hero_alt": "Рабочая композиция автора: разработка и игровые истории",
+    "hero_media_id": null,
+    "seo_title": "Разработка игр и ПО. · akaalexey",
+    "seo_description": "Код, игровые механики и тексты. Здесь — выбранный проект и моя работа над ним.",
+    "seo_image": "/assets/redesign/personal-studio.webp",
+    "primary": {
+      "label": "Смотреть мой вклад",
+      "url": "/projects/rublemet/"
+    },
+    "secondary": {
+      "label": "Новости AGL",
+      "url": "https://t.me/alex_game_lab"
+    },
+    "featured_project": "rublemet",
+    "sections": [
+      {
+        "type": "text",
+        "title": "Рублемёт — от действия к истории.",
+        "body": "Механики развития, сюжет и тексты. Мой текущий игровой проект в AGL.",
+        "image": "/assets/redesign/rublemet-cover.webp",
+        "alt": "Мир Рублемёта",
+        "links": [
+          {
+            "label": "Разобрать кейс",
+            "url": "/projects/rublemet/"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "title": "Работаю на стыке задач.",
+        "body": "Разработка ПО и игр, Python, SQL и JavaScript. Мне интересны системы, в которых техническое решение поддерживает понятный пользователю сценарий.",
+        "links": [
+          {
+            "label": "Опыт и подход",
+            "url": "/experience/"
+          }
+        ]
+      }
+    ],
+    "links": [],
+    "footer_note": "",
+    "channel_label": "Канал AGL",
+    "channel_url": "https://t.me/alex_game_lab"
+  },
+  "personal/about": {
+    "title": "О работе.",
+    "intro": "Разработка ПО и игр. В «Рублемёте» занимаюсь механиками, сюжетом и текстами, руковожу проектом.",
+    "eyebrow": "AKAALEXEY",
+    "hero_image": "/assets/alexey-portrait.webp",
+    "hero_mobile_image": "",
+    "hero_alt": "Иллюстрация автора",
+    "hero_media_id": null,
+    "seo_title": "О работе. · akaalexey",
+    "seo_description": "Разработка ПО и игр. В «Рублемёте» занимаюсь механиками, сюжетом и текстами, руковожу проектом.",
+    "seo_image": "/assets/alexey-portrait.webp",
+    "primary": {
+      "label": "",
+      "url": ""
+    },
+    "secondary": {
+      "label": "",
+      "url": ""
+    },
+    "featured_project": "rublemet",
+    "sections": [
+      {
+        "type": "text",
+        "title": "От идеи к работающему сценарию",
+        "body": "Мне интересно соединять техническую часть с тем, как человек пользуется результатом: что он видит, какое действие выбирает и что получает в ответ."
+      },
+      {
+        "type": "text",
+        "title": "Проверять на практике",
+        "body": "Начинаю с конкретной задачи и небольшого рабочего решения. Затем уточняю детали, смотрю на связи между частями и довожу сценарий до понятного результата.",
+        "links": [
+          {
+            "label": "Как это выглядит в Рублемёте",
+            "url": "/projects/rublemet/"
+          }
+        ]
+      }
+    ],
+    "links": [],
+    "footer_note": "",
+    "channel_label": "Канал AGL",
+    "channel_url": "https://t.me/alex_game_lab"
+  },
+  "personal/projects": {
+    "title": "Выбранная работа.",
+    "intro": "Один проект подробно: задача, мои решения, материалы и текущее состояние.",
+    "eyebrow": "ПРОЕКТЫ",
+    "hero_image": "",
+    "hero_mobile_image": "",
+    "hero_alt": "",
+    "hero_media_id": null,
+    "seo_title": "Выбранная работа. · akaalexey",
+    "seo_description": "Один проект подробно: задача, мои решения, материалы и текущее состояние.",
+    "seo_image": "",
+    "primary": {
+      "label": "",
+      "url": ""
+    },
+    "secondary": {
+      "label": "",
+      "url": ""
+    },
+    "featured_project": "rublemet",
+    "sections": [
+      {
+        "type": "text",
+        "title": "Рублемёт",
+        "body": "Игровые механики, сюжет, тексты и руководство проектом AGL.",
+        "image": "/assets/redesign/rublemet-cover.webp",
+        "alt": "Герой Рублемёта",
+        "links": [
+          {
+            "label": "Открыть кейс",
+            "url": "/projects/rublemet/"
+          }
+        ]
+      }
+    ],
+    "links": [],
+    "footer_note": "",
+    "channel_label": "Канал AGL",
+    "channel_url": "https://t.me/alex_game_lab"
+  },
+  "personal/project-rublemet": {
+    "title": "Рублемёт. Механика становится историей.",
+    "intro": "Мой вклад в игру AGL: игровые механики, сюжет и тексты, руководство проектом. Проект находится в разработке.",
+    "eyebrow": "ВЫБРАННЫЙ КЕЙС / AGL",
+    "hero_image": "/assets/redesign/rublemet-cover.webp",
+    "hero_mobile_image": "",
+    "hero_alt": "Промо-иллюстрация мира Рублемёта",
+    "hero_media_id": null,
+    "seo_title": "Рублемёт. Механика становится историей. · akaalexey",
+    "seo_description": "Мой вклад в игру AGL: игровые механики, сюжет и тексты, руководство проектом. Проект находится в разработке.",
+    "seo_image": "/assets/redesign/rublemet-cover.webp",
+    "primary": {
+      "label": "Страница игры в AGL",
+      "url": "https://alexgamelab.ru/projects/rublemet/"
+    },
+    "secondary": {
+      "label": "Новости проекта",
+      "url": "https://alexgamelab.ru/news/?project=rublemet"
+    },
+    "featured_project": "rublemet",
+    "sections": [
+      {
+        "type": "text",
+        "title": "Задача",
+        "body": "Связать понятное повторяемое действие с развитием и сюжетными событиями. Игрок должен видеть, зачем он действует сейчас и какие возможности открываются дальше.",
+        "eyebrow": "01 / ЗАДАЧА"
+      },
+      {
+        "type": "text",
+        "title": "Мои решения",
+        "body": "Работаю над связью механик развития, профессий и событий. Занимаюсь сюжетом, персонажами и текстами, чтобы история поддерживала игровой путь. Как руководитель проекта определяю направление работы и координирую её.",
+        "eyebrow": "02 / МОЙ ВКЛАД"
+      },
+      {
+        "type": "text",
+        "title": "Материалы",
+        "body": "Промо-иллюстрация передаёт мир проекта. Актуальные изменения и анонсы опубликованы в новостях AGL; иллюстрация не является скриншотом интерфейса.",
+        "image": "/assets/redesign/rublemet-cover.webp",
+        "alt": "Герой Рублемёта на городской улице",
+        "links": [
+          {
+            "label": "Новости Рублемёта",
+            "url": "https://alexgamelab.ru/news/?project=rublemet"
+          }
+        ],
+        "eyebrow": "03 / МАТЕРИАЛЫ"
+      },
+      {
+        "type": "text",
+        "title": "Результат и следующий шаг",
+        "body": "Проект находится в разработке и тестировании. На этом этапе моя работа объединяет игровые механики, сюжет и тексты в одном проекте. По мере развития игры здесь появятся дополнительные подтверждённые материалы и результаты.",
+        "eyebrow": "04 / СОСТОЯНИЕ"
+      }
+    ],
+    "links": [],
+    "footer_note": "",
+    "channel_label": "Канал AGL",
+    "channel_url": "https://t.me/alex_game_lab"
+  },
+  "personal/experience": {
+    "title": "Опыт — в решениях и практике.",
+    "intro": "Разработка программ и игр, работа над механиками и текстами, организация работы проекта.",
+    "eyebrow": "ОПЫТ И ПОДХОД",
+    "hero_image": "",
+    "hero_mobile_image": "",
+    "hero_alt": "",
+    "hero_media_id": null,
+    "seo_title": "Опыт — в решениях и практике. · akaalexey",
+    "seo_description": "Разработка программ и игр, работа над механиками и текстами, организация работы проекта.",
+    "seo_image": "",
+    "primary": {
+      "label": "",
+      "url": ""
+    },
+    "secondary": {
+      "label": "",
+      "url": ""
+    },
+    "featured_project": "rublemet",
+    "sections": [
+      {
+        "type": "text",
+        "title": "Разработка ПО и игр",
+        "body": "Работаю с Python, SQL и JavaScript. Соединяю техническую реализацию с задачей и пользовательским сценарием.",
+        "eyebrow": "01 / РАЗРАБОТКА"
+      },
+      {
+        "type": "text",
+        "title": "Игровые системы и тексты",
+        "body": "В «Рублемёте» работаю над игровыми механиками, сюжетной частью, персонажами и текстами.",
+        "eyebrow": "02 / ИГРЫ"
+      },
+      {
+        "type": "text",
+        "title": "Работа с проектом",
+        "body": "Основал Alex Game Lab. Руковожу «Рублемётом»: определяю направление работы и связываю отдельные части проекта.",
+        "eyebrow": "03 / ОРГАНИЗАЦИЯ"
+      },
+      {
+        "type": "text",
+        "title": "Алгоритмы и соревнования",
+        "body": "Участвовал и занимал призовые места в соревнованиях по алгоритмическому программированию и CTF. Имею второй спортивный разряд по спортивному программированию.",
+        "eyebrow": "04 / ПРАКТИКА"
+      }
+    ],
+    "links": [],
+    "footer_note": "",
+    "channel_label": "Канал AGL",
+    "channel_url": "https://t.me/alex_game_lab"
+  },
+  "personal/contact": {
+    "title": "Связь с командой.",
+    "intro": "Канал обращений к администрации будет добавлен после подключения. Пока здесь доступны новости AGL и публичные материалы.",
+    "eyebrow": "КОНТАКТЫ",
+    "hero_image": "",
+    "hero_mobile_image": "",
+    "hero_alt": "",
+    "hero_media_id": null,
+    "seo_title": "Связь с командой. · akaalexey",
+    "seo_description": "Канал обращений к администрации будет добавлен после подключения. Пока здесь доступны новости AGL и публичные материалы.",
+    "seo_image": "",
+    "primary": {
+      "label": "Канал AGL",
+      "url": "https://t.me/alex_game_lab"
+    },
+    "secondary": {
+      "label": "Проект на GitHub",
+      "url": "https://github.com/Alex-Game-Lab"
+    },
+    "featured_project": "rublemet",
+    "sections": [
+      {
+        "type": "text",
+        "title": "Обращения к администрации",
+        "body": "Отдельный Telegram-бот пока не подключён. Когда он будет готов, ссылка появится на этой странице."
+      },
+      {
+        "type": "links",
+        "title": "Публичные обновления",
+        "body": "Канал AGL — новости студии и «Рублемёта».",
+        "links": [
+          {
+            "label": "Открыть канал AGL",
+            "url": "https://t.me/alex_game_lab"
+          }
+        ]
+      }
+    ],
+    "links": [],
+    "footer_note": "",
+    "channel_label": "Канал AGL",
+    "channel_url": "https://t.me/alex_game_lab"
+  },
+  "personal/navigation": {
+    "title": "akaalexey",
+    "intro": "Разработка ПО и игр",
+    "eyebrow": "AKA ALEXEY",
+    "hero_image": "",
+    "hero_mobile_image": "",
+    "hero_alt": "",
+    "hero_media_id": null,
+    "seo_title": "akaalexey · akaalexey",
+    "seo_description": "Разработка ПО и игр",
+    "seo_image": "",
+    "primary": {
+      "label": "",
+      "url": ""
+    },
+    "secondary": {
+      "label": "",
+      "url": ""
+    },
+    "featured_project": "rublemet",
+    "sections": [
+      {
+        "type": "text",
+        "title": "Вне портфолио",
+        "body": "",
+        "links": [
+          {
+            "label": "Alex Game Lab",
+            "url": "https://alexgamelab.ru/"
+          },
+          {
+            "label": "Канал AGL",
+            "url": "https://t.me/alex_game_lab"
+          },
+          {
+            "label": "GitHub",
+            "url": "https://github.com/akaAlexey"
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "label": "Работа",
+        "url": "/projects/"
+      },
+      {
+        "label": "Обо мне",
+        "url": "/about/"
+      },
+      {
+        "label": "Опыт",
+        "url": "/experience/"
+      },
+      {
+        "label": "Контакты",
+        "url": "/contact/"
+      }
+    ],
+    "footer_note": "Разработка игр и программ.",
+    "channel_label": "Канал AGL",
+    "channel_url": "https://t.me/alex_game_lab"
+  }
+}
